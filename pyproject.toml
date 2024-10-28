@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "posts-comments-api"
+version = "0.1.0"
+description = "API for managing posts and comments with AI moderation and automatic responses. The API should be developed using FastAPI and Pydantic."
+authors = ["Oleksandr Konstantinov <alx.konstantinov@gmail.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.2"
+pydantic = "^2.9.2"
+uvicorn = {extras = ["standard"], version = "^0.32.0"}
+pytest = "^8.3.3"
+python-jose = "^3.3.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+bcrypt = "4.0.1"
+python-multipart = "^0.0.12"
+httpx = "^0.27.2"
+requests = "^2.32.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "uvicorn app.main:app --reload"
