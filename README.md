@@ -11,8 +11,8 @@ This API allows users to manage posts and comments with AI moderation and automa
 ## Setup
 1. **Initialize the project:**
    - Navigate to the directory where you want to create the project.
-   mkdir posts_comments_api
-   cd posts_comments_api
+   mkdir test_posts_comments_api
+   cd test_posts_comments_api
 
 2. Install dependencies:
 ```poetry install```
@@ -136,7 +136,7 @@ Ensure you have installed python-multipart and a compatible version of bcrypt:
 
 ### Running Tests
 To run the test suite, use:
-```pytest```
+```pytest``` or ```poetry run pytest```
 
 ### Additional Information
     This API uses a fake in-memory database for demonstration purposes. In a production setup, it should be replaced with a real database (e.g., SQL, NoSQL).
